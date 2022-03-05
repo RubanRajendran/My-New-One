@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test name="Test">
+    <classes>
+      <class name="org.test.Test1"/>
+      <class name="org.test.Test2"/>
+    </classes>
+  </test> <!-- Test -->
+  <test parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="org.test.Test1">
+        <methods>
+          <include name="closeTheDriver"/>
+          <include name="tc1" invocation-numbers="2 3"/>
+          <include name="lanchBrowser"/>
+        </methods>
+      </class> <!-- org.test.Test1 -->
+      <class name="org.test.Test2">
+        <methods>
+          <include name="lanchBrowser"/>
+          <include name="tc1" invocation-numbers="3"/>
+          <include name="closeTheDriver"/>
+        </methods>
+      </class> <!-- org.test.Test2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="org.test.Test1">
+        <methods>
+          <include name="closeTheDriver"/>
+          <include name="closeTheDriver"/>
+          <include name="tc1" invocation-numbers="2 3"/>
+          <include name="lanchBrowser"/>
+          <include name="lanchBrowser"/>
+        </methods>
+      </class> <!-- org.test.Test1 -->
+      <class name="org.test.Test2">
+        <methods>
+          <include name="lanchBrowser"/>
+          <include name="lanchBrowser"/>
+          <include name="closeTheDriver"/>
+          <include name="closeTheDriver"/>
+        </methods>
+      </class> <!-- org.test.Test2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test parallel="classes" name="Test(failed)(failed)">
+    <classes>
+      <class name="org.test.Test1">
+        <methods>
+          <include name="closeTheDriver"/>
+          <include name="closeTheDriver"/>
+          <include name="lanchBrowser"/>
+          <include name="lanchBrowser"/>
+        </methods>
+      </class> <!-- org.test.Test1 -->
+      <class name="org.test.Test2">
+        <methods>
+          <include name="lanchBrowser"/>
+          <include name="lanchBrowser"/>
+          <include name="tc1" invocation-numbers="0"/>
+          <include name="closeTheDriver"/>
+          <include name="closeTheDriver"/>
+        </methods>
+      </class> <!-- org.test.Test2 -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->
