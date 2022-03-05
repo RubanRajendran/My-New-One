@@ -31,9 +31,9 @@ public class Test1 extends  BaseClass{
 	private Object[][] data() {
 		return new Object[][] {
 			{"Ruban","Ruban1234"},
-			{"Rajendran","Rajendran12345"},
-			{"Rajesh","Rajesh12345"},
-			{"Rakshee","Rakshee12345"}
+//			{"Rajendran","Rajendran12345"},
+//			{"Rajesh","Rajesh12345"},
+//			{"Rakshee","Rakshee12345"}
 		};
 	}
 	
